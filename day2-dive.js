@@ -1,6 +1,6 @@
-//////////////////////////////////////////////////////
-///                     INPUT                      ///
-//////////////////////////////////////////////////////
+/**************/
+/**  INPUT  **/
+/*************/
 
 const directions = [
   { forward: 1 },
@@ -1010,7 +1010,7 @@ let horizontalArray = [];
 let depthPos = 0;
 let depthArray = [];
 
-const printHorizontalPos = () => {
+const printResult1 = () => {
   for (let direction of directions) {
     if (Object.keys(direction).includes("forward")) {
       horizontalArray.push(parseInt(Object.values(direction)));
@@ -1033,7 +1033,8 @@ const printHorizontalPos = () => {
 
 let aim = 0;
 let aimArray = [];
-const printDepthPos = () => {
+
+const printResult2 = () => {
   for (let direction of directions) {
     if (Object.keys(direction).includes("down")) {
       aimArray.push(parseInt(Object.values(direction)));
@@ -1052,7 +1053,6 @@ const printDepthPos = () => {
       depthArray.push(parseInt(Object.values(direction)) * aim);
     }
   }
-
   horizontalPos = horizontalArray.reduce((acc, current) => {
     return acc + current;
   });
@@ -1062,5 +1062,5 @@ const printDepthPos = () => {
   console.log(horizontalPos * depthPos);
 };
 
-// printHorizontalPos();
-printDepthPos();
+// printResult1();
+printResult2();
