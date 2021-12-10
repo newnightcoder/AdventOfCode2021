@@ -1,8 +1,8 @@
-/**************/
-/**  INPUT  **/
-/*************/
+//////////////////////////////////////////////////////
+///                     INPUT                      ///
+//////////////////////////////////////////////////////
 
-const input = [
+const output = [
   103, 112, 111, 133, 132, 128, 136, 138, 133, 136, 137, 140, 144, 156, 155,
   172, 171, 172, 185, 203, 206, 209, 208, 212, 209, 210, 211, 214, 245, 247,
   249, 246, 274, 276, 294, 292, 297, 291, 304, 311, 325, 336, 337, 344, 350,
@@ -159,8 +159,8 @@ const input = [
 
 const printResult1 = () => {
   let numberOfTimes = 0;
-  for (let i = 0; i < input.length; i++) {
-    if (input[i + 1] > input[i]) numberOfTimes++;
+  for (let i = 0; i < output.length; i++) {
+    if (output[i + 1] > output[i]) numberOfTimes++;
   }
   console.log(numberOfTimes);
 };
@@ -170,8 +170,8 @@ printResult1();
 const printResult2 = () => {
   let numberOfTimes = 0;
   let sumArray = [];
-  for (let i = 0; i < input.length; i++) {
-    let sum = input[i] + input[i + 1] + input[i + 2];
+  for (let i = 0; i < output.length; i++) {
+    let sum = output[i] + output[i + 1] + output[i + 2];
     sumArray.push(sum);
   }
 
